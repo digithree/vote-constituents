@@ -1,44 +1,44 @@
-#,Name,Yes,No,Spoilt,Boxes opened,Turnout,,
-1,Donegal North East,,,,,,,
-2,Donegal South West,,,,,,,
-3,Sligo-North Leitrim,,,,,,,
-4,Cavan-Monaghan,,,,,,,
-5,Louth,63%,37%,,?,,,
-6,Meath East,,,,,,,
-7,Meath West,,,,,,,
-8,Longford-Westmeath,,,,,,,
-9,Roscommon-South Leitrim,48%,52%,,50%,,,
-10,Mayo,54%,46%,,30%,,,
-11,Galway West,62%,38%,,100%,,,
-12,Galway East,,,,,,,
-13,Laois-Offaly,,,,,,,
-14,Kildare North,,,,,,,
-15,Kildare South,,,,,,,
-16,Wicklow,,,,,,,
-17,Carlow-Kilkenny,,,,,,,
-18,Tipperary North,55%,35%,,,,,
-19,Tipperary South,55%,45%,,,,,
-20,Clare,58%,42%,,,,,
-21,Limerick City,64%,36%,,,,,
-22,Limerick,54%,46%,,,,,
-23,Kerry North-West Limerick,57%,43%,,,,,
-24,Kerry South,,,,,,,
-25,Cork South West,,,,,,,
-26,Cork North West,,,,,,,
-27,Cork North Central,63%,37%,,34%,,,
-28,Cork South Central,65%,35%,,96%,,,
-29,Cork East,,,,,,,
-30,Waterford,,,,,,,
-31,Wexford,,,,,,,
-32,Dublin North,71%,29%,,28%,,,
-33,Dublin West,71%,29%,,100%,64%,,
-34,Dublin North East,,,,,,,
-35,Dublin North Central,,,,,,,
-36,Dublin North West,70%,30%,,,,,
-37,Dublin Central,,,,,,,
-38,Dublin South East,,,,,,,
-39,Dublin South Central,,,,,,,
-40,Dublin Mid West,71%,29%,,100%,63%,,
-41,Dublin South West,71%,29%,,89%,,,
-42,Dublin South,70%,30%,,62%,,,
-43,Dún Laoghaire,71%,,,89%,,,
+#,Name,Yes,No,Boxes opened,Turnout
+1,Donegal North East,0.5,0.5,0,0.5
+2,Donegal South West,0.5,0.5,0,0.5
+3,Sligo-North Leitrim,0.58,0.42,1,0.58
+4,Cavan-Monaghan,0.5,0.5,0,0.5
+5,Louth,0.63,0.37,0.01,0.5
+6,Meath East,0.64,0.36,1,0.6
+7,Meath West,0.5,0.5,0,0.5
+8,Longford-Westmeath,0.54,0.46,1,0.55
+9,Roscommon-South Leitrim,0.48,0.52,0.5,0.5
+10,Mayo,0.54,0.46,0.3,0.5
+11,Galway West,0.61,0.39,1,0.5
+12,Galway East,0.53,0.47,1,0.5
+13,Laois-Offaly,0.5,0.5,0,0.5
+14,Kildare North,0.7,0.3,1,0.62
+15,Kildare South,0.5,0.5,0,0.5
+16,Wicklow,0.5,0.5,0,0.5
+17,Carlow-Kilkenny,0.5,0.5,0,0.5
+18,Tipperary North,0.55,0.45,0.01,0.5
+19,Tipperary South,0.55,0.45,0.01,0.5
+20,Clare,0.58,0.42,0.01,0.5
+21,Limerick City,0.63,0.37,1,0.5
+22,Limerick,0.54,0.46,1,0.5
+23,Kerry North-West Limerick,0.57,0.43,0.01,0.5
+24,Kerry South,0.5,0.5,0,0.5
+25,Cork South West,0.5,0.5,0,0.5
+26,Cork North West,0.5,0.5,0,0.5
+27,Cork North Central,0.64,0.36,1,0.6
+28,Cork South Central,0.65,0.35,0.96,0.5
+29,Cork East,0.5,0.5,0,0.5
+30,Waterford,0.5,0.5,0,0.5
+31,Wexford,0.5,0.5,0,0.5
+32,Dublin North,0.71,0.29,0.28,0.5
+33,Dublin West,0.71,0.29,1,0.64
+34,Dublin North East,0.5,0.5,0,0.5
+35,Dublin North Central,0.5,0.5,0,0.5
+36,Dublin North West,0.7,0.3,0.01,0.5
+37,Dublin Central,0.5,0.5,0,0.5
+38,Dublin South East,0.5,0.5,0,0.5
+39,Dublin South Central,0.5,0.5,0,0.5
+40,Dublin Mid West,0.71,0.29,1,0.63
+41,Dublin South West,0.71,0.29,1,0.63
+42,Dublin South,0.7,0.3,0.62,0.5
+43,Dún Laoghaire,0.71,0.29,0.89,0.5

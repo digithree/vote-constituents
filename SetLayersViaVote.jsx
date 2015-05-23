@@ -1,39 +1,51 @@
 ﻿// NAME: 
-//	SaveLayers
+//	SetLayersViaVote
 
 // DESCRIPTION: 
-//	Saves each layer in the active document to a PNG or JPG file named after the layer. 
-//	These files will be created in the current document folder.
+//	Sets layer opacity for Irish constituency map for vote resuts
 
 // REQUIRES: 
 //	Adobe Photoshop CS2 or higher
 
-// VERSIONS:
-//	27 March 2013 by Robin Parmar (robin@robinparmar.com)
-//		preferences stored in object
-//		auto-increment file names to prevent collisions
-//		properly handles layer groups
-//		header added
-//		code comments added
-//		main() now has error catcher
-//		counts number of layers
-//		many little code improvements
-
+// Based on "SaveLayers" script by
 //	26 Sept 2012 by Johannes on stackexchange
 //		original version
+
+// This edit by Simon Kenny 23 May 2015
+
 
 // enable double-clicking from Finder/Explorer (CS2 and higher)
 #target photoshop
 app.bringToFront();
 
+var data = [];
+
+function openData() {
+	var dataFile = new File(app.activeDocument.path + '/results.csv');
+	dataFile.open('r');
+	dataFile.readln(); // Skip first line
+	while (!dataFile.eof) {
+	  var dataFileLine = dataFile.readln();
+	  var dataFilePieces = dataFileLine.split(',');
+	  data.push({
+	    num: dataFilePieces[0],
+	    name: dataFilePieces[1],
+	    yes: dataFilePieces[2],
+	    no: dataFilePieces[3],
+	    boxesOpened: dataFilePieces[4],
+	    turnOut: dataFilePieces[5],
+	    hasData: dataFilePieces[4] > 0
+	  });
+	}
+	dataFile.close();
+}
+
 function main() {
-    // two quick checks
+    // a quick check
 	if(!okDocument()) {
         alert("Document must be a layered PSD.");
         return; 
     }
-    var ok = confirm("This document contains " + activeDocument.layers.length + " top level layers.\nBe aware that large numbers of layers will take some time!\nContinue?");
-    if(!ok) return
 
 	// user preferences
 	prefs = new Object();
@@ -42,11 +54,70 @@ function main() {
 	prefs.filePath = app.activeDocument.path;
 	prefs.count = 0;
 
-    //instantiate dialogue
-    Dialog();
+	openData();
     
-    saveLayers(activeDocument);
-    alert("Saved " + prefs.count + " files.");
+    //saveLayers(activeDocument);
+    //alert("Saved " + prefs.count + " files.");
+    setOpacity(activeDocument);
+}
+
+var NUM_CONSTITUENCIES = 43;
+
+var QTR_1 = 0.4;
+var QTR_2 = 0.5;
+var QTR_3 = 0.7;
+
+var RED_START = QTR_1;
+var RED_END = QTR_2;
+var YELLOW_START = QTR_1;
+var YELLOW_MID = QTR_2;
+var YELLOW_END = QTR_3;
+var GREEN_START = QTR_2;
+var GREEN_END = QTR_3;
+
+/*
+var RED_START = 0.2
+var RED_END = 0.5;
+var YELLOW_START = 0.3;
+var YELLOW_MID = 0.4;
+var YELLOW_END = 0.7;
+var GREEN_START = 0.5;
+var GREEN_END = 0.7;
+*/
+
+function setOpacity(ref) {
+	for( var i = 0 ; i < NUM_CONSTITUENCIES ; i++ ) {
+		if( data[i].hasData ) {
+			var yes = data[i].yes;
+			var red = yes < RED_END ? 1 - ((yes-RED_START)*(1/(RED_END-RED_START))) : 0;
+			if( yes < RED_START ) {
+				red = 1;
+			}
+			var yellow = yes >= YELLOW_MID && yes < YELLOW_END ? 
+				((yes-YELLOW_MID)*(1/(YELLOW_END-YELLOW_MID))) : 0;
+			/*
+			var yellow = 0;
+			if( yes >= YELLOW_START && yes < YELLOW_MID ) {
+				yellow = ((yes-YELLOW_START)*(1/(YELLOW_MID-YELLOW_START)));
+			} else if( yes >= YELLOW_MID && yes < YELLOW_END ) {
+				yellow = 1 - ((yes-YELLOW_MID)*(1/(YELLOW_END-YELLOW_MID)));
+			}
+			*/
+			var green = yes >= GREEN_START ? ((yes-GREEN_START)*(1/(GREEN_END-GREEN_START))) : 0;
+			if( yes > GREEN_END ) {
+				green = 1;
+			}
+			var num = i + 1;
+			ref.artLayers.getByName(''+(i+1)+' red').opacity = red * 100;
+			ref.artLayers.getByName(''+(i+1)+' yellow').opacity = yellow * 100;
+			//ref.artLayers.getByName(''+(i+1)+' yellow').opacity = 0;
+			ref.artLayers.getByName(''+(i+1)+' green').opacity = green * 100;
+		} else {
+			ref.artLayers.getByName(''+(i+1)+' red').opacity = 0;
+			ref.artLayers.getByName(''+(i+1)+' yellow').opacity = 0;
+			ref.artLayers.getByName(''+(i+1)+' green').opacity = 0;
+		}
+	}
 }
 
 function saveLayers(ref) {
@@ -60,6 +131,7 @@ function saveLayers(ref) {
             // recurse if current layer is a group
             saveLayers(layer);
         } else {
+        	/*
             // otherwise make sure the layer is visible and save it
             for(var j = 0 ; j < len ; j++ ) {
             	if( ref.layers[j] == layer ) {
@@ -69,6 +141,7 @@ function saveLayers(ref) {
             	}
             }
             saveImage(layer.name);
+            */
         }
 	}
 }
