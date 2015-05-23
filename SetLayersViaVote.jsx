@@ -63,7 +63,7 @@ function main() {
 
 var NUM_CONSTITUENCIES = 43;
 
-var QTR_1 = 0.4;
+var QTR_1 = 0.45;
 var QTR_2 = 0.5;
 var QTR_3 = 0.7;
 
