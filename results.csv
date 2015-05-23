@@ -1,44 +1,44 @@
 #,Name,Yes,No,Boxes opened,Turnout
 1,Donegal North East,0.53,0.47,1,0.51
-2,Donegal South West,0.5,0.5,0.01,0.52
-3,Sligo-North Leitrim,0.58,0.42,1,0.58
+2,Donegal South West,0.5,0.5,1,0.52
+3,Sligo-North Leitrim,0.52,0.48,1,0.58
 4,Cavan-Monaghan,0.51,0.49,1,0.57
 5,Louth,0.64,0.36,1,0.6
 6,Meath East,0.64,0.36,1,0.6
-7,Meath West,0.5,0.5,0,0.5
+7,Meath West,0.6,0.4,1,0.5
 8,Longford-Westmeath,0.54,0.46,1,0.55
-9,Roscommon-South Leitrim,0.49,0.51,0.5,0.62
-10,Mayo,0.54,0.46,0.3,0.5
+9,Roscommon-South Leitrim,0.49,0.51,1,0.62
+10,Mayo,0.52,0.48,1,0.5
 11,Galway West,0.62,0.38,1,0.55
 12,Galway East,0.53,0.47,1,0.5
 13,Laois-Offaly,0.57,0.43,1,0.59
 14,Kildare North,0.7,0.3,1,0.62
 15,Kildare South,0.66,0.34,1,0.58
-16,Wicklow,0.68,0.32,0.01,0.5
+16,Wicklow,0.68,0.32,1,0.5
 17,Carlow-Kilkenny,0.56,0.44,1,0.65
-18,Tipperary North,0.55,0.45,0.01,0.63
+18,Tipperary North,0.55,0.45,1,0.63
 19,Tipperary South,0.56,0.44,1,0.59
-20,Clare,0.58,0.42,0.01,0.5
+20,Clare,0.58,0.42,1,0.59
 21,Limerick City,0.64,0.36,1,0.63
 22,Limerick,0.55,0.45,1,0.59
-23,Kerry North-West Limerick,0.56,0.44,1,0.57
+23,Kerry North-West Limerick,0.55,0.45,1,0.57
 24,Kerry South,0.55,0.45,1,0.58
 25,Cork South West,0.5,0.5,0,0.5
 26,Cork North West,0.5,0.5,0,0.5
 27,Cork North Central,0.64,0.36,1,0.6
-28,Cork South Central,0.65,0.35,0.96,0.5
+28,Cork South Central,0.66,0.34,1,0.5
 29,Cork East,0.5,0.5,0,0.5
-30,Waterford,0.6,0.4,0.01,0.5
-31,Wexford,0.63,0.37,1,0.58
-32,Dublin North,0.73,0.27,0.28,0.66
+30,Waterford,0.6,0.4,1,0.5
+31,Wexford,0.64,0.36,1,0.58
+32,Dublin North,0.73,0.27,1,0.66
 33,Dublin West,0.71,0.29,1,0.64
-34,Dublin North East,0.5,0.5,0,0.5
+34,Dublin North East,0.67,0.33,1,0.5
 35,Dublin North Central,0.69,0.31,1,0.69
-36,Dublin North West,0.7,0.3,0.01,0.5
-37,Dublin Central,0.5,0.5,0,0.5
+36,Dublin North West,0.71,0.29,1,0.6
+37,Dublin Central,0.72,0.28,1,0.5
 38,Dublin South East,0.75,0.25,1,0.58
-39,Dublin South Central,0.72,0.28,1,0.6
+39,Dublin South Central,0.72,0.28,1,0.61
 40,Dublin Mid West,0.71,0.29,1,0.63
 41,Dublin South West,0.71,0.29,1,0.63
-42,Dublin South,0.7,0.3,0.62,0.68
-43,Dún Laoghaire,0.72,0.28,0.89,0.67
+42,Dublin South,0.7,0.3,1,0.68
+43,Dún Laoghaire,0.72,0.28,1,0.67

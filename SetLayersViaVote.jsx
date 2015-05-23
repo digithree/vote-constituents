@@ -109,10 +109,10 @@ function setOpacity(ref) {
 				green = 1;
 			}
 			var num = i + 1;
-			ref.artLayers.getByName(''+(i+1)+' red').opacity = red * 100;
-			ref.artLayers.getByName(''+(i+1)+' yellow').opacity = yellow * 100;
-			//ref.artLayers.getByName(''+(i+1)+' yellow').opacity = 0;
-			ref.artLayers.getByName(''+(i+1)+' green').opacity = green * 100;
+			ref.artLayers.getByName(''+(i+1)+' red').opacity = yes < 0.5 ? 20 + (red * 80) : 0;
+			//ref.artLayers.getByName(''+(i+1)+' yellow').opacity = yellow * 100;
+			ref.artLayers.getByName(''+(i+1)+' yellow').opacity = 0;
+			ref.artLayers.getByName(''+(i+1)+' green').opacity = yes >= 0.5 ? 20 + (green * 80) : 0;
 		} else {
 			ref.artLayers.getByName(''+(i+1)+' red').opacity = 0;
 			ref.artLayers.getByName(''+(i+1)+' yellow').opacity = 0;
