@@ -65,7 +65,7 @@ var NUM_CONSTITUENCIES = 43;
 
 var QTR_1 = 0.45;
 var QTR_2 = 0.5;
-var QTR_3 = 0.7;
+var QTR_3 = 0.75;
 
 var RED_START = QTR_1;
 var RED_END = QTR_2;
@@ -94,7 +94,8 @@ function setOpacity(ref) {
 				red = 1;
 			}
 			var yellow = yes >= YELLOW_MID && yes < YELLOW_END ? 
-				((yes-YELLOW_MID)*(1/(YELLOW_END-YELLOW_MID))) : 0;
+				1 - ((yes-YELLOW_MID)*(1/(YELLOW_END-YELLOW_MID))) : 0;
+			yellow *= 0.6;
 			/*
 			var yellow = 0;
 			if( yes >= YELLOW_START && yes < YELLOW_MID ) {
